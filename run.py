@@ -4,8 +4,6 @@ import sys
 import time
 
 from tf_pose import common
-import cv2
-import numpy as np
 from tf_pose.estimator import TfPoseEstimator
 from tf_pose.networks import get_graph_path, model_wh
 
@@ -49,7 +47,7 @@ if __name__ == '__main__':
 
     image = TfPoseEstimator.draw_humans(image, humans, imgcopy=False)
 
-    import matplotlib.pyplot as plt
+    #import matplotlib.pyplot as plt
 
     fig = plt.figure()
     a = fig.add_subplot(2, 2, 1)
@@ -80,5 +78,10 @@ if __name__ == '__main__':
     a.set_title('Vectormap-y')
     # plt.imshow(CocoPose.get_bgimg(inp, target_size=(vectmap.shape[1], vectmap.shape[0])), alpha=0.5)
     plt.imshow(tmp2_even, cmap=plt.cm.gray, alpha=0.5)
+
     plt.colorbar()
     plt.show()
+
+    cv2.imwrite('output.png', image)
+    Image('output.png')
+    print('image output')
