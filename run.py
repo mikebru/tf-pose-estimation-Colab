@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     image = TfPoseEstimator.draw_humans(image, humans, imgcopy=False)
 
-    #import matplotlib.pyplot as plt
+    import matplotlib.pyplot as plt
 
     fig = plt.figure()
     a = fig.add_subplot(2, 2, 1)
