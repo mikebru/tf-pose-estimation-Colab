@@ -85,6 +85,6 @@ if __name__ == '__main__':
     plt.colorbar()
     plt.show()
 
-    cv2.imwrite('output.png', image)
-    Image('output.png')
+    cv2.imwrite('output.png', bgimg)
+    #Image('output.png')
     print('image output')
